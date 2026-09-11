@@ -1,0 +1,131 @@
+[
+  {
+    "description": "  As a user\n  I want to search for a product on LDLC\n  So that I can view its title and price",
+    "elements": [
+      {
+        "description": "",
+        "id": "product-search-on-ldlc;search-and-extract-an-existing-product",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Search and extract an existing product",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 586443800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open the LDLC homepage",
+            "match": {
+              "location": "steps\\product.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 671260600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I search for the product \"RTX 4070\"",
+            "match": {
+              "location": "steps\\product.steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 770636299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "at least 3 results are displayed",
+            "match": {
+              "location": "steps\\product.steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83613100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I click on the first result",
+            "match": {
+              "location": "steps\\product.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 210937300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the product title is displayed",
+            "match": {
+              "location": "steps\\product.steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65584499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the product price is displayed",
+            "match": {
+              "location": "steps\\product.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7382900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the data is saved in a JSON file",
+            "match": {
+              "location": "steps\\product.steps.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22844200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 263642199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "product-search-on-ldlc",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Product search on LDLC",
+    "tags": [],
+    "uri": "features\\search_product.feature"
+  }
+]
