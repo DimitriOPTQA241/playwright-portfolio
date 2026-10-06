@@ -11,8 +11,8 @@ Feature: Product search on LDLC
     When I click on the first result
     Then the product title is displayed
     And the product price is displayed
-    And the data is saved in a JSON file
+    And the data is saved in a JSON file and Excel file
 
     Examples:
     |keyword|
-    |RTX 4070|
+    |RTX|

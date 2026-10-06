@@ -18,6 +18,7 @@ Given ('I open the LDLC homepage', async function () {
 When ('I search for the product {string}',{timeout: 5000}, async function (keyword) {
     this.productpage = new ProductPage(this.page);
     await this.productpage.searchfield(keyword);
+    await this.page.screenshot({ path: 'screenshots/results.png' });
     
 }); 
 
@@ -47,7 +48,8 @@ Then ('the product price is displayed',{timeout: 5000}, async function () {
 await this.productpage.productPriceDisplayed()
 });
 
-Then ('the data is saved in a JSON file',{timeout: 5000}, async function () {
+Then ('the data is saved in a JSON file and Excel file',{timeout: 5000}, async function () {
    
 await this.productpage.saveProductPrice()
+await this.productpage.saveProductData()
 });

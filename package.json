@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {  
-  "test:ldlc": "cucumber-js --config config/cucumber.config.js",
-  "test:ldlc:headed": "cross-env HEADED=true cucumber-js --config config/cucumber.config.js"
+  "scripts": {
+    "test:ldlc": "cucumber-js --config config/cucumber.config.js",
+    "test:ldlc:headed": "cross-env HEADED=true cucumber-js --config config/cucumber.config.js"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@cucumber/cucumber": "^13.0.0",
-    "playwright-bdd": "^9.2.0"
+    "playwright-bdd": "^9.2.0",
+    "xlsx": "^0.18.5"
   }
 }

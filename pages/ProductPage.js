@@ -1,5 +1,6 @@
 const {BasePage} = require('./BasePage');
 const { expect } = require('@playwright/test') ;
+const {saveToExcel}= require('../utils/excel');
 const fs = require('fs');
 
 class ProductPage extends BasePage {
@@ -13,7 +14,7 @@ async searchfield(keyword) {
 }
 
 async isResultDisplayed() {
-    const resultTitle = await this.page.locator("div[class='title-2']").textContent();
+    const resultTitle = await this.page.locator("div[class='title-2']").first().textContent();
      const count = parseInt(resultTitle);
     expect(count," Au moins 3 résultats sont affichés").toBeGreaterThan(2)
 }
@@ -52,7 +53,17 @@ async saveProductPrice(){
 }
 
 
+async saveProductData(){
+const productTitle = await this.page.locator('h1.title-1').innerText()
+const priceProduct = await this.page.locator('.price').first().textContent();
+ const data = {
+  brand : 'LDLC',
+  title : productTitle ,
+  price : priceProduct,
+ }
 
+ saveToExcel(data)
+}
 
 
 
