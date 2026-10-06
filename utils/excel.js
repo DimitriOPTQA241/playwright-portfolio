@@ -1,6 +1,6 @@
 const XLSX = require('xlsx')
 const fs   = require('fs');
-
+const path = require('path')
 
 
 function saveToExcel(data) {
@@ -13,13 +13,10 @@ worksheet,
 'Prices'
 
 );
-fs.mkdirSync('data', { recursive : true})
 
-XLSX.writeFile(
-    workbook,
-    './data/dataprice.xlsx'
-);
-
+const dataDir = path.join(__dirname, '..', 'data')
+fs.mkdirSync(dataDir, { recursive: true })
+XLSX.writeFile(workbook, path.join(dataDir, 'dataprice.xlsx'))
 
 }
 
